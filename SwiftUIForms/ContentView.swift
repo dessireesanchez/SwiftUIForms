@@ -12,6 +12,11 @@ class FormViewModel: ObservableObject {
     @State var lastName = ""
     @State var password = ""
     @State var passwordAgain = ""
+    @State var streetAddress = ""
+    @State var city = ""
+    @State var state = ""
+    @State var postalCode = ""
+    @State var country = ""
 }
 
 struct ContentView: View {
@@ -34,11 +39,11 @@ struct ContentView: View {
                     }
                     
                     Section(header: Text("Mailing Address")) {
-                        TextField("Street Address", text: $viewModel.firstName)
-                        TextField("City", text: $viewModel.firstName)
-                        TextField("State", text: $viewModel.firstName)
-                        TextField("Postal Code", text: $viewModel.firstName)
-                        TextField("Country", text: $viewModel.firstName)
+                        TextField("Street Address", text: $viewModel.streetAddress)
+                        TextField("City", text: $viewModel.city)
+                        TextField("State", text: $viewModel.state)
+                        TextField("Postal Code", text: $viewModel.postalCode)
+                        TextField("Country", text: $viewModel.country)
 
                     }
                 }
